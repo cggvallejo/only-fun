@@ -49,12 +49,13 @@ const InteractiveVideo = ({ reel, index }) => {
     >
       <video 
         ref={videoRef}
-        src={reel.url} 
+        src={`${reel.url}#t=0.1`} 
         width="100%" 
         height="100%" 
         loop 
         muted 
         playsInline
+        preload="metadata"
         title={reel.title}
         style={{ objectFit: 'cover', border: 'none', display: 'block' }}
       ></video>
