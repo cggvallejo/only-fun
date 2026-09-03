@@ -1,30 +1,8 @@
 import React, { useRef, useState } from 'react';
+import driveVideos from '../data/driveVideos.json';
 
-const ALL_VIDEOS = [
-  { id: 'AVKW4584', url: '/videos/AVKW4584.MP4', title: 'Amigos de Fiesta • Pura Buena Vibra', category: 'Amigos & Fiesta' },
-  { id: 'BGNI7635', url: '/videos/BGNI7635.MP4', title: 'Mamá e Hijos en la Cabina 360', category: 'Familias & Niños' },
-  { id: 'CRKQ9621', url: '/videos/CRKQ9621.MP4', title: 'Diversión entre Amigos en Cancún', category: 'Amigos & Fiesta' },
-  { id: 'DXAF4591', url: '/videos/DXAF4591.MP4', title: 'Noche de Chicas • Girls Night Out', category: 'Glamour & Chicas' },
-  { id: 'EEJG6543', url: '/videos/EEJG6543.MP4', title: 'Baile y Ritmo Tropical', category: 'Amigos & Fiesta' },
-  { id: 'FNAV8175', url: '/videos/FNAV8175.MP4', title: 'Pareja en la Zona Hotelera', category: 'Parejas & Romance' },
-  { id: 'GXUU6443', url: '/videos/GXUU6443.MP4', title: 'Grupo frente a la Guitarra de Hard Rock', category: 'Amigos & Fiesta' },
-  { id: 'HHRW5498', url: '/videos/HHRW5498.MP4', title: 'Glamour y Estilo en Vestido Esmeralda', category: 'Glamour & Chicas' },
-  { id: 'HIAF0851', url: '/videos/HIAF0851.MP4', title: 'Padre e Hijo en la Cabina 360', category: 'Familias & Niños' },
-  { id: 'HIZC1522', url: '/videos/HIZC1522.MP4', title: 'Elegancia en Rojo • Fiesta Nocturna', category: 'Glamour & Chicas' },
-  { id: 'IEZG5212', url: '/videos/IEZG5212.MP4', title: 'Sonrisas y Elegancia en Vestido Negro', category: 'Glamour & Chicas' },
-  { id: 'IIEG1093', url: '/videos/IIEG1093.MP4', title: 'Beso Romántico en Pareja 360', category: 'Parejas & Romance' },
-  { id: 'JTCY2670', url: '/videos/JTCY2670.MP4', title: 'Alegría y Baile Familiar', category: 'Familias & Niños' },
-  { id: 'MDXG1402', url: '/videos/MDXG1402.MP4', title: 'Glamour Nocturno con Amigas', category: 'Glamour & Chicas' },
-  { id: 'MQIH3228', url: '/videos/MQIH3228.MP4', title: 'Pareja Juvenil • Ritmo y Estilo', category: 'Parejas & Romance' },
-  { id: 'NBYE9611', url: '/videos/NBYE9611.MP4', title: 'Fiesta con Luces LED y Mucha Energía', category: 'Glamour & Chicas' },
-  { id: 'NNCC7659', url: '/videos/NNCC7659.MP4', title: 'Padre e Hijo en Hard Rock Cancún', category: 'Familias & Niños' },
-  { id: 'NNDL4081', url: '/videos/NNDL4081.MP4', title: 'Grupo de Amigas • Pura Sonrisa', category: 'Glamour & Chicas' },
-  { id: 'PGUX1902', url: '/videos/PGUX1902.MP4', title: 'Amigos con su Mascota • Pet Friendly 360', category: 'Amigos & Fiesta' },
-  { id: 'QJRP4655', url: '/videos/QJRP4655.MP4', title: 'Actitud de Fiesta en Cancún', category: 'Glamour & Chicas' },
-  { id: 'RUSF8361', url: '/videos/RUSF8361.MP4', title: 'Gran Familia Celebrando en 360', category: 'Familias & Niños' },
-  { id: 'SYII9363', url: '/videos/SYII9363.MP4', title: 'Saludos y Fiesta en Pareja', category: 'Parejas & Romance' },
-  { id: 'XDTX9730', url: '/videos/XDTX9730.MP4', title: 'Baile y Vueltas en Pareja', category: 'Parejas & Romance' },
-];
+const ALL_VIDEOS = driveVideos;
+
 
 const CATEGORIES = ['Todos', 'Amigos & Fiesta', 'Familias & Niños', 'Parejas & Romance', 'Glamour & Chicas'];
 
