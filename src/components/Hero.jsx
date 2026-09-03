@@ -1,10 +1,13 @@
 import React from 'react';
+import DynamicParticles from './DynamicParticles';
 
-const Hero = () => {
+const Hero = ({ onOpenBot }) => {
   return (
     <section id="home" className="hero">
       <div className="hero-bg">
-        {/* Dynamic Particles - 360 Camera Theme */}
+        {/* Canvas de Partículas Dinámicas e Interactivas */}
+        <DynamicParticles />
+
         {/* Camera Icon */}
         <div className="particle" style={{ width: '40px', height: '40px', top: '15%', left: '10%', animationDelay: '0s' }}>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={{ width: '100%', height: '100%', color: 'var(--accent-gold)' }}>
@@ -89,14 +92,21 @@ const Hero = () => {
         </div>
       </div>
       <div className="hero-content animate-slide-up">
+        <div className="hero-badge animate-fade-in">
+          <span>✨ Riviera Maya 2026: Cancún • Playa del Carmen • Tulum • Cozumel</span>
+        </div>
         <h1 className="animate-fade-in delay-100">Elevamos Cada Momento con Diversión Pura</h1>
         <p className="animate-fade-in delay-200">
-          Descubre el entretenimiento premium para bodas, eventos corporativos y fiestas exclusivas en Cancún. 
-          Haz que tu celebración de 2026 sea inolvidable.
+          Descubre el entretenimiento y cabinas 360 premium para bodas, eventos corporativos y fiestas exclusivas en Cancún y la Riviera Maya. 
+          Haz que tu celebración sea inolvidable.
         </p>
         <div className="hero-buttons animate-fade-in delay-300">
-          <a href="#gallery" className="btn-primary">Ver Galería</a>
-          <a href="#contact" className="btn-gold">Reservar Ahora</a>
+          <button onClick={onOpenBot} className="btn-gold" style={{ cursor: 'pointer' }}>
+            ⚡ Cotizar por WhatsApp
+          </button>
+          <a href="#contact" className="btn-primary">
+            Ver Cobertura y Fechas
+          </a>
         </div>
       </div>
     </section>

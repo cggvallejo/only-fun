@@ -141,16 +141,44 @@ ul {
 .nav-logo {
   display: flex;
   align-items: center;
-  gap: 12px;
-  font-weight: 800;
-  font-size: 1.5rem;
+}
+
+.nav-logo a {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
 }
 
 .nav-logo img {
-  height: 100px;
+  height: 85px;
   width: auto;
+  max-width: 260px;
   object-fit: contain;
-  object-position: center;
+  object-position: left center;
+  display: block;
+  transition: transform 0.25s ease, height 0.3s ease;
+}
+
+.navbar.scrolled .nav-logo img {
+  height: 68px;
+}
+
+.nav-logo img:hover {
+  transform: scale(1.02);
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+}
+
+.footer-logo-img {
+  height: 75px;
+  width: auto;
+  max-width: 240px;
+  object-fit: contain;
+  object-position: left center;
+  display: block;
 }
 
 .nav-links {
@@ -427,3 +455,847 @@ ul {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-15px); }
 }
+
+/* ==========================================================
+   HERO BADGE & ACCENTS
+   ========================================================== */
+.hero-badge {
+  display: inline-block;
+  background: rgba(214, 158, 46, 0.15);
+  border: 1px solid rgba(214, 158, 46, 0.4);
+  color: var(--accent-gold-light);
+  padding: 6px 18px;
+  border-radius: 50px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  margin-bottom: 1.2rem;
+  box-shadow: 0 0 20px rgba(214, 158, 46, 0.15);
+}
+
+.badge-gold {
+  display: inline-block;
+  background: rgba(214, 158, 46, 0.18);
+  border: 1px solid rgba(214, 158, 46, 0.45);
+  color: var(--accent-gold-light);
+  padding: 5px 16px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* ==========================================================
+   BOOKING & QUOTE SECTION
+   ========================================================== */
+.booking-section {
+  padding: 90px 5%;
+  background: radial-gradient(circle at 50% 20%, rgba(49, 130, 206, 0.08) 0%, rgba(6, 9, 14, 0.95) 75%);
+  border-top: 1px solid var(--glass-border);
+  position: relative;
+}
+
+.booking-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.booking-header {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.booking-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 30px;
+  align-items: start;
+}
+
+.booking-info-card {
+  padding: 35px 30px;
+  background: rgba(12, 19, 34, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.booking-info-item {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.info-icon {
+  font-size: 1.6rem;
+  background: rgba(214, 158, 46, 0.15);
+  border-radius: 12px;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.booking-info-item h4 {
+  font-size: 1.1rem;
+  color: var(--text-main);
+  margin-bottom: 4px;
+}
+
+.booking-info-item p {
+  color: var(--text-muted);
+  font-size: 0.92rem;
+  line-height: 1.45;
+}
+
+.booking-whatsapp-direct {
+  margin-top: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 20px;
+}
+
+.btn-whatsapp-large {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #25D366, #128C7E);
+  color: white;
+  padding: 14px 20px;
+  border-radius: 14px;
+  font-size: 0.9rem;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-whatsapp-large:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 30px rgba(37, 211, 102, 0.45);
+}
+
+.btn-whatsapp-large strong {
+  font-size: 1.25rem;
+  margin-top: 2px;
+}
+
+/* Form Styles */
+.booking-form-card {
+  padding: 35px 30px;
+  background: rgba(12, 19, 34, 0.85);
+  border: 1px solid rgba(214, 158, 46, 0.3);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+.booking-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.form-row {
+  display: flex;
+  gap: 16px;
+}
+
+.form-field {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-field.full-width {
+  flex: 1 1 100%;
+}
+
+.form-field label {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.booking-form input,
+.booking-form select,
+.booking-form textarea {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  padding: 12px 14px;
+  color: white;
+  font-family: inherit;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.25s, box-shadow 0.25s;
+}
+
+.booking-form input:focus,
+.booking-form select:focus,
+.booking-form textarea:focus {
+  border-color: var(--accent-gold);
+  box-shadow: 0 0 12px rgba(214, 158, 46, 0.3);
+}
+
+.select-highlighted {
+  border-color: rgba(214, 158, 46, 0.5) !important;
+  background: rgba(20, 27, 45, 0.9) !important;
+  color: var(--accent-gold-light) !important;
+  font-weight: 600;
+}
+
+.btn-gold-action {
+  background: linear-gradient(135deg, var(--accent-gold), var(--accent-gold-light));
+  color: #06090e;
+  border: none;
+  border-radius: 12px;
+  padding: 15px 25px;
+  font-weight: 800;
+  font-size: 1.05rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  margin-top: 10px;
+}
+
+.btn-gold-action:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 25px rgba(214, 158, 46, 0.45);
+}
+
+.btn-gold-action.full-width {
+  width: 100%;
+}
+
+/* ==========================================================
+   FLOATING ACTIONS: WHATSAPP DIRECTO & ASISTENTE VIRTUAL
+   ========================================================== */
+.floating-actions-container {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+/* 1. Botón Verde Circular: WhatsApp Directo */
+.wa-direct-float-btn {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #25D366, #128C7E);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  box-shadow: 0 8px 25px rgba(37, 211, 102, 0.45);
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
+  position: relative;
+  text-decoration: none;
+}
+
+.wa-direct-float-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 12px 30px rgba(37, 211, 102, 0.65);
+}
+
+.wa-direct-tooltip {
+  position: absolute;
+  right: calc(100% + 12px);
+  background: rgba(10, 15, 24, 0.95);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(37, 211, 102, 0.4);
+  color: white;
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 5px 12px;
+  border-radius: 20px;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  transform: translateX(10px);
+  transition: opacity 0.25s, transform 0.25s;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+}
+
+.wa-direct-float-btn:hover .wa-direct-tooltip {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* 2. Botón Asistente Virtual: Estilo Dorado / Robot Futurista */
+.assistant-trigger-pill {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: linear-gradient(135deg, rgba(16, 24, 40, 0.95), rgba(26, 36, 60, 0.95));
+  backdrop-filter: blur(12px);
+  border: 1.5px solid var(--accent-gold);
+  border-radius: 50px;
+  padding: 8px 18px 8px 10px;
+  cursor: pointer;
+  color: white;
+  box-shadow: 0 10px 30px rgba(214, 158, 46, 0.3);
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease, border-color 0.3s;
+}
+
+.assistant-trigger-pill:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 14px 35px rgba(214, 158, 46, 0.5);
+  border-color: var(--accent-gold-light);
+}
+
+.assistant-trigger-pill.active {
+  background: #1a202c;
+  border-color: #e2e8f0;
+}
+
+.assistant-pill-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #0b111e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-shadow: 0 0 15px rgba(214, 158, 46, 0.5);
+  overflow: hidden;
+}
+
+.assistant-pill-logo {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  z-index: 2;
+}
+
+.assistant-pulse-ring {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 2px solid var(--accent-gold-light);
+  animation: pulse-ring 2s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+}
+
+@keyframes pulse-ring {
+  0% { transform: scale(1); opacity: 0.8; }
+  100% { transform: scale(1.5); opacity: 0; }
+}
+
+.assistant-pill-text {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  line-height: 1.2;
+}
+
+.assistant-pill-text strong {
+  font-size: 0.92rem;
+  color: #fff;
+}
+
+.assistant-pill-text small {
+  font-size: 0.75rem;
+  color: var(--accent-gold-light);
+  font-weight: 600;
+}
+
+/* ==========================================================
+   VENTANA DEL ASISTENTE VIRTUAL
+   ========================================================== */
+.wa-bot-window {
+  position: fixed;
+  bottom: 100px;
+  right: 25px;
+  width: 390px;
+  max-width: calc(100vw - 30px);
+  max-height: 85vh;
+  background: rgba(10, 15, 24, 0.97);
+  backdrop-filter: blur(20px);
+  border: 1.5px solid rgba(214, 158, 46, 0.4);
+  border-radius: 22px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.75);
+  z-index: 10000;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.wa-bot-header {
+  padding: 16px 20px;
+  background: linear-gradient(135deg, rgba(214, 158, 46, 0.15), rgba(49, 130, 206, 0.12));
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.assistant-avatar-glow {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #101625;
+  border: 1.5px solid var(--accent-gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 15px rgba(214, 158, 46, 0.4);
+  position: relative;
+}
+
+.wa-bot-online-badge {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 12px;
+  height: 12px;
+  background: #25D366;
+  border: 2px solid #0a0f18;
+  border-radius: 50%;
+}
+
+.wa-bot-header-info {
+  flex: 1;
+}
+
+.wa-bot-header-info h4 {
+  font-size: 1rem;
+  color: white;
+  margin: 0;
+  font-weight: 700;
+}
+
+.wa-bot-header-info p {
+  font-size: 0.78rem;
+  color: var(--accent-gold-light);
+  margin: 0;
+}
+
+.wa-bot-close-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  color: white;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  font-size: 0.9rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+
+.wa-bot-close-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Banner de Contacto Directo */
+.assistant-direct-banner {
+  background: rgba(37, 211, 102, 0.1);
+  border-bottom: 1px solid rgba(37, 211, 102, 0.25);
+  padding: 8px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.assistant-wa-link {
+  color: #25D366;
+  font-weight: 700;
+  text-decoration: underline;
+  transition: opacity 0.2s;
+}
+
+.assistant-wa-link:hover {
+  opacity: 0.85;
+}
+
+.wa-bot-body {
+  padding: 20px;
+  overflow-y: auto;
+  max-height: calc(85vh - 120px);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.wa-bot-msg-bot {
+  display: flex;
+  margin-bottom: 6px;
+}
+
+.wa-bot-msg-bubble {
+  background: rgba(49, 130, 206, 0.15);
+  border: 1px solid rgba(49, 130, 206, 0.3);
+  padding: 12px 16px;
+  border-radius: 14px 14px 14px 4px;
+  font-size: 0.88rem;
+  line-height: 1.45;
+  color: var(--text-main);
+}
+
+.wa-bot-alert-error {
+  background: rgba(229, 62, 62, 0.15);
+  border: 1px solid rgba(229, 62, 62, 0.4);
+  color: #feb2b2;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 0.82rem;
+}
+
+.wa-bot-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.wa-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.wa-form-group label {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.wa-form-group input,
+.wa-form-group select,
+.wa-form-group textarea {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  padding: 10px 12px;
+  color: white;
+  font-size: 0.9rem;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.wa-form-group input:focus,
+.wa-form-group select:focus,
+.wa-form-group textarea:focus {
+  border-color: var(--accent-gold);
+  box-shadow: 0 0 10px rgba(214, 158, 46, 0.25);
+}
+
+.wa-select-highlight {
+  border-color: var(--accent-gold) !important;
+  color: var(--accent-gold-light) !important;
+  background: #111a2e !important;
+  font-weight: 600;
+}
+
+.wa-btn-full {
+  width: 100%;
+  padding: 12px;
+  font-size: 0.95rem;
+  margin-top: 6px;
+}
+
+.wa-bot-actions-row {
+  display: flex;
+  gap: 10px;
+  margin-top: 6px;
+}
+
+.btn-outline-back {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: var(--text-muted);
+  border-radius: 10px;
+  padding: 10px 14px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: all 0.2s;
+}
+
+.btn-outline-back:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.btn-whatsapp-submit {
+  flex: 1;
+  background: linear-gradient(135deg, #25D366, #128C7E);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 11px 16px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(37, 211, 102, 0.35);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-whatsapp-submit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 25px rgba(37, 211, 102, 0.5);
+}
+
+@keyframes scaleUp {
+  from {
+    opacity: 0;
+    transform: scale(0.9) translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.animate-scale-up {
+  animation: scaleUp 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Responsiveness for Booking and Bot */
+@media (max-width: 900px) {
+  .booking-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .form-row {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .floating-actions-container {
+    bottom: 16px;
+    right: 16px;
+    gap: 10px;
+  }
+
+  .assistant-trigger-pill {
+    padding: 6px 14px 6px 8px;
+  }
+
+  .assistant-pill-icon {
+    width: 38px;
+    height: 38px;
+  }
+
+  .assistant-emoji {
+    font-size: 1.15rem;
+  }
+
+  .assistant-pill-text strong {
+    font-size: 0.84rem;
+  }
+
+  .assistant-pill-text small {
+    display: none;
+  }
+
+  .wa-direct-float-btn {
+    width: 48px;
+    height: 48px;
+  }
+
+  .wa-bot-window {
+    right: 15px;
+    bottom: 85px;
+    width: calc(100vw - 30px);
+  }
+}
+
+/* ==========================================================
+   CAMERA 360 STUDIO EXPERIENCE
+   ========================================================== */
+.camera-360-studio-card {
+  background: radial-gradient(circle at 50% 30%, rgba(18, 28, 48, 0.96), rgba(6, 10, 18, 0.98));
+  border: 1.5px solid rgba(214, 158, 46, 0.35);
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.65), 0 0 35px rgba(49, 130, 206, 0.15);
+  position: relative;
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.studio-hud-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 20px;
+  background: rgba(6, 9, 14, 0.85);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.studio-rec-indicator {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+}
+
+.rec-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #e53e3e;
+  box-shadow: 0 0 10px #e53e3e;
+  animation: pulse-dot 1.2s infinite;
+}
+
+.rec-timecode {
+  font-family: monospace;
+  color: var(--text-muted);
+  font-size: 0.82rem;
+}
+
+.studio-badge-specs {
+  display: flex;
+  gap: 8px;
+}
+
+.spec-item {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: var(--text-muted);
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-size: 0.72rem;
+  font-weight: 600;
+}
+
+.spec-item-highlight {
+  background: rgba(214, 158, 46, 0.15);
+  border: 1px solid rgba(214, 158, 46, 0.4);
+  color: var(--accent-gold-light);
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.studio-stage-viewport {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 0;
+}
+
+.studio-stage-svg {
+  width: 100%;
+  height: auto;
+  max-height: 380px;
+  display: block;
+}
+
+.studio-flash-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.6) 0%, transparent 80%);
+  pointer-events: none;
+  opacity: 0;
+  z-index: 40;
+  transition: opacity 0.1s ease;
+}
+
+.studio-flash-overlay.active {
+  opacity: 1;
+}
+
+.sparkle-float {
+  animation: float360 3s ease-in-out infinite;
+}
+
+.studio-hud-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 18px;
+  background: rgba(6, 9, 14, 0.9);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.studio-speed-selector {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.control-label {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin-right: 4px;
+}
+
+.speed-pill {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: var(--text-muted);
+  border-radius: 20px;
+  padding: 4px 10px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.speed-pill:hover {
+  background: rgba(255, 255, 255, 0.12);
+  color: white;
+}
+
+.speed-pill.active {
+  background: linear-gradient(135deg, var(--accent-gold), var(--accent-gold-light));
+  color: #06090e;
+  border-color: var(--accent-gold);
+  font-weight: 700;
+}
+
+.btn-flash-trigger {
+  background: rgba(49, 130, 206, 0.15);
+  border: 1px solid rgba(49, 130, 206, 0.4);
+  color: var(--text-main);
+  border-radius: 8px;
+  padding: 5px 12px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.btn-flash-trigger:hover {
+  background: rgba(49, 130, 206, 0.3);
+  box-shadow: 0 0 12px rgba(49, 130, 206, 0.4);
+}
+
