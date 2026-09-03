@@ -27,18 +27,7 @@ const EVENT_TYPES = [
   'Otro'
 ];
 
-const WhatsAppBot = ({ isOpen: externalIsOpen, onClose: externalOnClose }) => {
-  const [internalIsOpen, setInternalIsOpen] = useState(false);
-  const isOpen = externalIsOpen !== undefined ? externalIsOpen : internalIsOpen;
-
-  const toggleOpen = () => {
-    if (externalOnClose && isOpen) {
-      externalOnClose();
-    } else {
-      setInternalIsOpen(!internalIsOpen);
-    }
-  };
-
+const WhatsAppBot = ({ isOpen, onToggle }) => {
   const [formData, setFormData] = useState({
     name: '',
     eventDate: '',
@@ -103,7 +92,7 @@ ${formData.extraNotes.trim() ? `📝 *Detalles adicionales:* ${formData.extraNot
         {/* Botón del Asistente Virtual (Diseño Distintivo Dorado / Robot) */}
         <button 
           className={`assistant-trigger-pill ${isOpen ? 'active' : ''}`}
-          onClick={toggleOpen}
+          onClick={onToggle}
           aria-label="Abrir Asistente Virtual de Cotizaciones"
         >
           <div className="assistant-pill-icon">
@@ -130,7 +119,7 @@ ${formData.extraNotes.trim() ? `📝 *Detalles adicionales:* ${formData.extraNot
               <h4>Asistente Virtual Only Fun ✨</h4>
               <p>Cotizador Automático Riviera Maya</p>
             </div>
-            <button className="wa-bot-close-btn" onClick={toggleOpen} aria-label="Cerrar">✕</button>
+            <button className="wa-bot-close-btn" onClick={onToggle} aria-label="Cerrar">✕</button>
           </div>
 
           {/* Banner informativo de WhatsApp Directo */}

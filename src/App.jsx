@@ -24,8 +24,8 @@ function App() {
     setBotOpen(true);
   };
 
-  const handleCloseBot = () => {
-    setBotOpen(false);
+  const handleToggleBot = () => {
+    setBotOpen(prev => !prev);
   };
 
   return (
@@ -36,7 +36,7 @@ function App() {
       <Gallery />
       <BookingSection onOpenBot={handleOpenBot} />
       <Footer />
-      <WhatsAppBot isOpen={botOpen} onClose={handleCloseBot} />
+      <WhatsAppBot isOpen={botOpen} onToggle={handleToggleBot} />
     </div>
   );
 }
