@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react';
-import driveVideos from '../data/driveVideos.json';
+import cloudinaryVideos from '../data/cloudinaryVideos.json';
 
-const ALL_VIDEOS = driveVideos;
+const ALL_VIDEOS = cloudinaryVideos;
 
 
 const CATEGORIES = ['Todos', 'Amigos & Fiesta', 'Familias & Niños', 'Parejas & Romance', 'Glamour & Chicas'];
